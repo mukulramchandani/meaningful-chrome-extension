@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Meaning Full",
+    "description": "Your Vocabulary assistance anywhere on the web!",
+    "version": "0.1",
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "permissions":["activeTab"],
+    "content_scripts":[
+        {
+            "matches": ["<all_urls>"],
+            "js": ["scripts/customElements.min.js","scripts/meaningFull.js"],
+            "runAt" : "document_end"
+
+        }
+    ]
+
+}
